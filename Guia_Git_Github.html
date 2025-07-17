@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comandos Git y GitHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto py-10 px-6">
+    <h1 class="text-3xl font-bold text-center mb-6 text-blue-800">Comandos Git y GitHub</h1>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Configuración</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git config --global user.name "nombreUsuario"</code> → Configurar nombre</li>
+          <li><code>git config --global user.email "correo@gmail.com"</code> → Configurar email</li>
+          <li><code>git config --global alias.nombreAlias</code> → Crear alias</li>
+          <li><code>git config --global --unset alias.nombreAlias</code> → Eliminar alias</li>
+          <li><code>.gitignore</code> → Excluir archivos del repositorio</li>
+          <li><code>git config --global credential.helper</code> → Guardar credenciales</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Inicialización y Repositorios</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git init</code> → Inicializar repositorio</li>
+          <li><code>git clone &lt;url&gt;</code> → Clonar repositorio</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Branching y Fusión</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git branch</code> → Ver ramas</li>
+          <li><code>git branch &lt;nombre&gt;</code> → Crear rama</li>
+          <li><code>git checkout &lt;nombre&gt;</code> → Cambiar de rama</li>
+          <li><code>git checkout -b &lt;nombre&gt;</code> → Crear y cambiar</li>
+          <li><code>git merge &lt;rama&gt;</code> → Fusionar ramas</li>
+          <li><code>git branch -d &lt;rama&gt;</code> → Eliminar rama</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Commits y Control de Cambios</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git status</code> → Ver estado</li>
+          <li><code>git add .</code> → Añadir todos los archivos</li>
+          <li><code>git commit -m "mensaje"</code> → Guardar cambios</li>
+          <li><code>git commit -a</code> → Añadir y guardar directo</li>
+          <li><code>git log</code> → Ver historial</li>
+          <li><code>git log --author="usuario"</code> → Historial por autor</li>
+          <li><code>git log --since="YYYY-MM-DD" --until="YYYY-MM-DD"</code> → Historial por fechas</li>
+          <li><code>git log --graph --oneline --all</code> → Ver ramas y commits</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Revertir y Recuperar Cambios</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git revert &lt;commit&gt;</code> → Revertir commit sin borrar</li>
+          <li><code>git reset --hard &lt;commit&gt;</code> → Volver versión anterior (elimina cambios)</li>
+          <li><code>git reset --soft &lt;commit&gt;</code> → Volver versión anterior (conserva staging)</li>
+          <li><code>git reflog</code> → Ver historial incluso borrado</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Remotos: Pull, Push</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git pull</code> → Traer cambios del remoto</li>
+          <li><code>git push</code> → Subir cambios</li>
+          <li><code>git push -u origin &lt;rama&gt;</code> → Subir nueva rama</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-700 border-b pb-2 mb-4">Otras Utilidades</h2>
+        <ul class="space-y-2 list-disc list-inside">
+          <li><code>git mv &lt;actual&gt; &lt;nuevo&gt;</code> → Renombrar archivo</li>
+          <li><code>git rm &lt;archivo&gt;</code> → Eliminar archivo</li>
+          <li><code>git rm --cached &lt;archivo&gt;</code> → Deshacer `git add`</li>
+          <li><code>git clean -fd</code> → Eliminar archivos no rastreados</li>
+          <li><code>git diff</code> → Ver diferencias</li>
+          <li><code>git diff --staged</code> → Ver staged changes</li>
+          <li><code>git add -p</code> → Añadir cambios por bloques</li>
+          <li><code>git show</code> → Ver detalle del último commit</li>
+          <li><code>git checkout master</code> → Ir a la rama master</li>
+          <li><code>git checkout -b hotfix_branch</code> → Crear rama hotfix</li>
+          <li><code>git merge --abort</code> → Cancelar merge con conflictos</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
