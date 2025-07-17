@@ -1,0 +1,50 @@
+Comandos Git y GitHub
+
+Configuración
+
+git config --global user.name "nombreUsuario" → Configurar nombre
+git config --global user.email "correo@gmail.com" → Configurar email
+git config --global alias.nombreAlias → Crear alias
+git config --global --unset alias.nombreAlias → Eliminar alias
+.gitignore → Excluir archivos del repositorio
+git config --global credential.helper → Guardar credenciales
+Inicialización y Repositorios
+git init → Inicializar repositorio
+git clone <url> → Clonar repositorio
+Branching y Fusión
+git branch → Ver ramas
+git branch <nombre> → Crear rama
+git checkout <nombre> → Cambiar de rama
+git checkout -b <nombre> → Crear y cambiar
+git merge <rama> → Fusionar ramas
+git branch -d <rama> → Eliminar rama
+Commits y Control de Cambios
+git status → Ver estado
+git add . → Añadir todos los archivos
+git commit -m "mensaje" → Guardar cambios
+git commit -a → Añadir y guardar directo
+git log → Ver historial
+git log --author="usuario" → Historial por autor
+git log --since="YYYY-MM-DD" --until="YYYY-MM-DD" → Historial por fechas
+git log --graph --oneline --all → Ver ramas y commits
+Revertir y Recuperar Cambios
+git revert <commit> → Revertir commit sin borrar
+git reset --hard <commit> → Volver versión anterior (elimina cambios)
+git reset --soft <commit> → Volver versión anterior (conserva staging)
+git reflog → Ver historial incluso borrado
+Remotos: Pull, Push
+git pull → Traer cambios del remoto
+git push → Subir cambios
+git push -u origin <rama> → Subir nueva rama
+Otras Utilidades
+git mv <actual> <nuevo> → Renombrar archivo
+git rm <archivo> → Eliminar archivo
+git rm --cached <archivo> → Deshacer `git add`
+git clean -fd → Eliminar archivos no rastreados
+git diff → Ver diferencias
+git diff --staged → Ver staged changes
+git add -p → Añadir cambios por bloques
+git show → Ver detalle del último commit
+git checkout master → Ir a la rama master
+git checkout -b hotfix_branch → Crear rama hotfix
+git merge --abort → Cancelar merge con conflictos
